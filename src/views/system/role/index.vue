@@ -95,11 +95,15 @@
       <el-table-column align="center" label="角色标识" prop="code" />
       <el-table-column align="center" label="显示顺序" prop="sort" />
       <el-table-column align="center" label="备注" prop="remark" />
+      <el-table-column align="center" label="租户编号" prop="tenantId"/>
+      <el-table-column align="center" label="租户名称" prop="tenantName"/>
+
       <el-table-column align="center" label="状态" prop="status">
         <template #default="scope">
           <dict-tag :type="DICT_TYPE.COMMON_STATUS" :value="scope.row.status" />
         </template>
       </el-table-column>
+
       <el-table-column
         :formatter="dateFormatter"
         align="center"
